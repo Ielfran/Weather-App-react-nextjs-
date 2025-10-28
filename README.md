@@ -1,10 +1,13 @@
 #  Weather Web App
 
 A modern weather web application built with **Next.js** and **React** that allows users to search for cities and view real-time weather information.  
-It features a clean and responsive UI, and includes city images such as `public/image1.png` for visual appeal.
+It features a clean and responsive UI.
 
 ---
 
+![Weather App Screenshot](public/image1.png)
+
+---
 ##  Features
 
 -  Search weather by city name  
