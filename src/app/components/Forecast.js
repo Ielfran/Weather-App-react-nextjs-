@@ -5,7 +5,6 @@ export default function Forecast({ data, unit }) {
     return <p className="text-white text-center">No forecast data available.</p>;
   }
 
-  // Filter for daily forecasts at noon
   const dailyForecasts = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 5);
 
   return (

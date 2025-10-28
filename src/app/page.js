@@ -11,7 +11,7 @@ export default function Home() {
   const [forecastData, setForecastData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [unit, setUnit] = useState('C'); // Celsius by default
+  const [unit, setUnit] = useState('C'); 
 
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
 
@@ -22,13 +22,11 @@ export default function Home() {
     setForecastData(null);
 
     try {
-      // Fetch current weather
       const weatherRes = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
       if (!weatherRes.ok) throw new Error('City not found or invalid API key.');
       const weather = await weatherRes.json();
       setWeatherData(weather);
 
-      // Fetch 5-day forecast
       const forecastRes = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`);
       if (!forecastRes.ok) throw new Error('Could not fetch forecast.');
       const forecast = await forecastRes.json();
